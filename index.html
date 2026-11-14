@@ -169,7 +169,7 @@
         if(!email||password.length<8){err('请输入邮箱和至少 8 位密码。 / Masukkan email dan kata sandi minimal 8 karakter.');return}
         if(!client){err('同步组件未加载，请刷新页面并保持联网。 / Komponen sinkronisasi belum dimuat. Segarkan halaman.');return}
         cn('正在注册… / Mendaftar…');
-        const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});
+        const {data,error}=await client.auth.signUp({email,password});
         if(error){err('注册失败：'+error.message);return}
         $('managerPassword').value='';
         if(data.session){cn('管理员账号已创建并登录。 / Akun administrator dibuat dan sudah masuk.');}
