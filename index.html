@@ -14,7 +14,8 @@
     .composer{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;box-shadow:var(--shadow);margin-bottom:26px}.field label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px 2px}.field input,.field select{width:100%;height:44px;border:1px solid #dfe4dc;border-radius:11px;padding:0 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:#77a18d;box-shadow:0 0 0 3px #77a18d22}.btn{height:44px;border:0;border-radius:11px;padding:0 18px;font-weight:700;white-space:nowrap}.btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 14px #183d3425}.btn-primary:hover{background:var(--green2)}.btn-light{background:#eef2ed;color:var(--green)}.btn-light:hover{background:#e2ebe3}.btn-done{background:#e8f2eb;color:#286447}.btn-small{height:36px;padding:0 12px;font-size:13px}
     .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.section-head h3{font-size:15px;margin:0}.section-head span{font-size:12px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:17px 18px;box-shadow:0 5px 16px rgba(26,53,45,.025);position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:#a9b8ad}.card.running::before{background:#79a98c}.card.due{border-color:#e7b3a9;background:#fffaf8}.card.due::before{background:var(--red)}.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.room{font-size:18px;font-weight:750;letter-spacing:-.02em}.note{color:var(--muted);font-size:12px;margin-top:2px}.badge{font-size:11px;font-weight:700;padding:5px 9px;border-radius:999px;background:#edf3ef;color:#52725f;white-space:normal;text-align:center;line-height:1.2;max-width:140px}.badge.due{background:#fae7e2;color:#a84537}.timer-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:17px 0 13px}.timer{font-size:31px;line-height:1;font-weight:750;letter-spacing:-.045em;font-variant-numeric:tabular-nums}.due .timer{color:var(--red)}.timer-label{font-size:12px;color:var(--muted);text-align:right}.meta{border-top:1px solid var(--line);padding-top:11px;display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--muted);font-size:12px}.actions{display:flex;gap:7px}.empty{grid-column:1/-1;background:var(--paper);border:1px dashed #ccd5cb;border-radius:17px;padding:36px 18px;text-align:center;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}.history{margin-top:28px}.history details{background:transparent}.history summary{cursor:pointer;font-weight:700;font-size:13px;color:#58675f}.history-list{margin-top:10px;display:grid;gap:8px}.history-item{background:#ffffff9c;border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted)}.history-item strong{color:var(--ink)}.footer-note{margin-top:24px;background:#ecefe8;border-radius:12px;padding:11px 14px;color:#64736a;font-size:12px;display:flex;gap:9px;align-items:flex-start}.footer-note b{color:var(--green)}.toast{position:fixed;right:22px;bottom:22px;max-width:min(400px,calc(100vw - 44px));background:#19372f;color:white;border-radius:13px;padding:13px 16px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}.btn-primary{height:auto;min-height:50px;line-height:1.2}.btn-small{height:auto;min-height:36px;white-space:normal;line-height:1.2;padding:6px 10px}
     .btn-primary{white-space:normal}.btn-primary .id{color:#d2e6dc}
-    @media(max-width:720px){.shell{padding:22px 16px 40px}.top{align-items:flex-start}.top-right{font-size:11px}.top-right .live-dot{font-size:13px}.intro{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.composer{grid-template-columns:1fr}.composer .btn{width:100%}.cards{grid-template-columns:1fr}.timer{font-size:29px}.history-item{flex-direction:column;gap:4px}}
+    .booking-panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:24px;box-shadow:var(--shadow)}.booking-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}.booking-heading h3{margin:0;font-size:16px}.booking-heading h3 .id{font-weight:450}.booking-heading p{margin:4px 0 0;color:var(--muted);font-size:12px}.booking-heading>strong{font-size:13px;white-space:nowrap;color:var(--green)}.booking-rooms{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}.booking-room{min-height:70px;border:1px solid var(--line);border-radius:12px;background:#f8f8f3;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px}.booking-room:disabled{cursor:default;opacity:1}.booking-room .room-number{font-size:17px;font-weight:750}.booking-room .room-state{font-size:11px;color:var(--muted)}.booking-room.reserved{background:#e8f2eb;border-color:#9fc5aa;color:#286447}.booking-room.reserved .room-state{color:#286447;font-weight:700}.booking-status{font-size:12px;color:var(--muted);margin-top:10px;min-height:18px}.booking-status.error{color:var(--red)}.booking-admin{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}.booking-admin summary{cursor:pointer;color:var(--green);font-size:12px;font-weight:700}.booking-help{font-size:12px;color:var(--muted);margin:9px 0}.manager-auth{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto auto;gap:9px;align-items:end}.manager-auth .field label{font-size:11px}.manager-auth input{height:40px}.manager-auth .btn{height:40px;min-height:40px;padding:0 12px;font-size:12px}.manager-session{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}.manager-session[hidden]{display:none}
+    @media(max-width:720px){.booking-rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.manager-auth{grid-template-columns:1fr 1fr}.manager-auth .btn{width:100%}.booking-heading{flex-direction:column;gap:5px}}.shell{padding:22px 16px 40px}.top{align-items:flex-start}.top-right{font-size:11px}.top-right .live-dot{font-size:13px}.intro{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.composer{grid-template-columns:1fr}.composer .btn{width:100%}.cards{grid-template-columns:1fr}.timer{font-size:29px}.history-item{flex-direction:column;gap:4px}}
   </style>
 </head>
 <body>
@@ -30,6 +31,21 @@
       <div class="stat"><span>今日开始计时包厢<small class="id">Ruang VIP mulai timer hari ini</small></span><strong id="todayRoomCount">0</strong><small class="stat-detail" id="todayStartSessions">共 0 次启动 / Total 0 timer</small></div>
       <div class="stat"><span>今日已完成换碟<small class="id">Penggantian piring selesai hari ini</small></span><strong id="doneCount">0</strong></div>
     </section>
+    <section class="booking-panel" aria-labelledby="bookingTitle">
+      <div class="booking-heading"><div><h3 id="bookingTitle">今日已预定包厢<small class="id">Ruang VIP yang dipesan hari ini</small></h3><p>手机更新后，服务员页面会实时显示 / Status tersinkron otomatis ke semua perangkat</p></div><strong id="bookingCount">已预定 0 间</strong></div>
+      <div id="bookingRooms" class="booking-rooms" aria-live="polite"></div>
+      <div id="bookingStatus" class="booking-status" role="status">正在连接共享预定表…</div>
+      <details class="booking-admin"><summary>管理员登录 / Masuk administrator</summary>
+        <p class="booking-help">使用创建 Supabase 项目时的管理员邮箱注册或登录。其他员工无需登录即可查看实时预定状态。<small class="id">Gunakan email administrator untuk mendaftar atau masuk. Staf lain tidak perlu masuk untuk melihat status terbaru.</small></p>
+        <form id="managerAuthForm" class="manager-auth">
+          <div class="field"><label for="managerEmail">管理员邮箱 / Email administrator</label><input id="managerEmail" type="email" autocomplete="username" required placeholder="name@example.com"></div>
+          <div class="field"><label for="managerPassword">密码 / Kata sandi</label><input id="managerPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="至少 8 位 / Minimal 8 karakter"></div>
+          <button class="btn btn-primary" type="submit">登录 / Masuk</button>
+          <button class="btn btn-light" id="managerSignup" type="button">注册管理员 / Daftar</button>
+        </form>
+        <div class="manager-session" id="managerSession" hidden><span id="managerEmailLabel"></span><button class="btn btn-light" id="managerSignout" type="button">退出 / Keluar</button></div>
+      </details>
+    </section>
     <form class="composer" id="startForm">
       <div class="field"><label for="room">包厢 / Ruang VIP</label><select id="room" required><option value="" disabled selected>选择包厢 / Pilih ruang VIP</option><option value="111">111</option><option value="333">333</option><option value="666">666</option><option value="777">777</option><option value="888">888</option><option value="999">999</option></select></div>
       <div class="field"><label for="guest">预订人或备注（选填）<span class="id-inline">/ Nama reservasi atau catatan (opsional)</span></label><input id="guest" maxlength="40" placeholder="例如：6 位 / Misalnya: 6 orang"></div>
@@ -41,6 +57,7 @@
     <div class="footer-note"><span>ⓘ</span><div><b>提醒设置 / Pengaturan pengingat：</b>到时会播报包厢号、播放四连提示音并重复提醒，直到确认换碟。请先测试提示音和语音，并保持页面打开、iPad 音量开启；计时期间页面会尝试保持屏幕点亮。<span class="id">Saat waktunya tiba, nomor ruang VIP akan disebutkan, nada peringatan berbunyi empat kali, lalu diulangi sampai penggantian piring dikonfirmasi. Uji nada dan suara terlebih dahulu, biarkan halaman terbuka, dan aktifkan volume iPad. Layar akan berusaha tetap menyala selama timer berjalan.</span></div></div>
   </main>
   <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.js" crossorigin="anonymous"></script>
   <script>
     (()=>{
       const KEY='meet-room-service-v1', STARTS_KEY='meet-room-start-log-v1', LIMIT=30*60*1000, HISTORY_DAYS=3;
@@ -93,5 +110,89 @@
       document.addEventListener('visibilitychange',()=>{if(!document.hidden){tick()}});window.addEventListener('focus',tick);tick();setInterval(tick,1000);
     })();
   </script>
+  <script>
+    (()=>{
+      const SUPABASE_URL='https://hnlusfiuoakbsofqnejq.supabase.co';
+      const SUPABASE_PUBLISHABLE_KEY='sb_publishable_mIT2IthpSiywib10aYsxGQ_YOUiKs36';
+      const ROOM_IDS=['111','333','666','777','888','999'];
+      const $=id=>document.getElementById(id);
+      const status=$('bookingStatus'),roomsEl=$('bookingRooms'),countEl=$('bookingCount');
+      let client=null,sessionUser=null,bookings={},channel=null,channelDate='',busy=new Set();
+      const cn=message=>{status.textContent=message;status.classList.remove('error')};
+      const err=message=>{status.textContent=message;status.classList.add('error')};
+      function localDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+      function escapeText(x){const e=document.createElement('span');e.textContent=String(x);return e.innerHTML}
+      function render(){
+        const booked=ROOM_IDS.filter(room=>bookings[room]===true);
+        countEl.textContent=`已预定 ${booked.length} 间 / Dipesan ${booked.length}`;
+        roomsEl.innerHTML=ROOM_IDS.map(room=>{const reserved=bookings[room]===true;const saving=busy.has(room);return `<button type="button" class="booking-room ${reserved?'reserved':''}" data-book-room="${room}" aria-pressed="${reserved}" ${!sessionUser||saving?'disabled':''}><span class="room-number">${room}</span><span class="room-state">${saving?'保存中…':reserved?'已预定 / Dipesan':'未预定 / Tersedia'}</span></button>`}).join('');
+        const form=$('managerAuthForm'),managerSession=$('managerSession');
+        form.hidden=!!sessionUser;managerSession.hidden=!sessionUser;
+        $('managerEmailLabel').textContent=sessionUser?`已登录：${escapeText(sessionUser.email||'管理员')}`:'';
+      }
+      async function loadBookings(){
+        if(!client){err('共享同步暂不可用，请检查网络 / Sinkronisasi belum tersedia. Periksa koneksi internet.');return}
+        const date=localDate();
+        const {data,error}=await client.from('meet_room_reservations').select('room,is_reserved').eq('reservation_date',date);
+        if(error){err('读取预定失败：'+error.message);return}
+        bookings={};for(const row of data||[])bookings[row.room]=row.is_reserved===true;
+        render();
+      }
+      function subscribe(){
+        const date=localDate();if(channel&&channelDate===date)return;
+        if(channel)client.removeChannel(channel);
+        channelDate=date;
+        channel=client.channel('meet-room-reservations-'+date).on('postgres_changes',{event:'*',schema:'public',table:'meet_room_reservations',filter:`reservation_date=eq.${date}`},()=>loadBookings()).subscribe(state=>{
+          if(state==='SUBSCRIBED')cn('实时同步已连接 / Sinkronisasi langsung aktif');
+          else if(state==='CHANNEL_ERROR'||state==='TIMED_OUT')err('实时同步暂时断开，正在重连 / Sinkronisasi terputus, menyambungkan kembali…');
+        });
+      }
+      async function toggleRoom(room){
+        if(!sessionUser||busy.has(room))return;
+        busy.add(room);render();
+        const date=localDate(),next=bookings[room]!==true;
+        const {error}=await client.from('meet_room_reservations').upsert({reservation_date:date,room,is_reserved:next,updated_at:new Date().toISOString(),updated_by:sessionUser.id},{onConflict:'reservation_date,room'});
+        busy.delete(room);
+        if(error){render();if(error.code==='42501'||error.code==='401')err('此账号没有预定修改权限，请使用项目管理员邮箱注册或登录。 / Akun ini tidak memiliki izin. Gunakan email administrator proyek.');else err('保存失败：'+error.message);return}
+        await loadBookings();
+      }
+      async function signIn(e){
+        e.preventDefault();const email=$('managerEmail').value.trim(),password=$('managerPassword').value;
+        if(!client){err('同步组件未加载，请刷新页面并保持联网。 / Komponen sinkronisasi belum dimuat. Segarkan halaman.');return}
+        cn('正在登录… / Sedang masuk…');
+        const {error}=await client.auth.signInWithPassword({email,password});
+        if(error){err('登录失败：'+error.message);return}
+        $('managerPassword').value='';cn('管理员已登录，可以管理预定。 / Administrator masuk; reservasi dapat dikelola.');
+      }
+      async function signUp(){
+        const email=$('managerEmail').value.trim(),password=$('managerPassword').value;
+        if(!email||password.length<8){err('请输入邮箱和至少 8 位密码。 / Masukkan email dan kata sandi minimal 8 karakter.');return}
+        if(!client){err('同步组件未加载，请刷新页面并保持联网。 / Komponen sinkronisasi belum dimuat. Segarkan halaman.');return}
+        cn('正在注册… / Mendaftar…');
+        const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});
+        if(error){err('注册失败：'+error.message);return}
+        $('managerPassword').value='';
+        if(data.session){cn('管理员账号已创建并登录。 / Akun administrator dibuat dan sudah masuk.');}
+        else{cn('注册邮件已发送，请先完成邮箱验证，再回到此页登录。 / Email verifikasi telah dikirim. Verifikasi lalu kembali untuk masuk.');}
+      }
+      async function start(){
+        render();
+        if(!window.supabase||!window.supabase.createClient){err('同步组件未加载；计时提醒仍可使用，请联网后刷新以查看预定。 / Komponen sinkronisasi gagal dimuat. Timer tetap berfungsi. Segarkan saat online.');return}
+        client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+        const {data}=await client.auth.getSession();sessionUser=data.session?.user||null;render();
+        await loadBookings();subscribe();
+        client.auth.onAuthStateChange((_event,next)=>{sessionUser=next?.user||null;render();setTimeout(()=>loadBookings(),0)});
+        $('managerAuthForm').addEventListener('submit',signIn);
+        $('managerSignup').addEventListener('click',signUp);
+        $('managerSignout').addEventListener('click',async()=>{await client.auth.signOut();sessionUser=null;render();cn('已退出管理员登录。 / Anda telah keluar.');});
+        roomsEl.addEventListener('click',e=>{const b=e.target.closest('[data-book-room]');if(b)toggleRoom(b.dataset.bookRoom)});
+        document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadBookings()});
+        window.addEventListener('focus',loadBookings);
+        setInterval(()=>{if(localDate()!==channelDate){subscribe();loadBookings()}},30000);
+      }
+      start();
+    })();
+  </script>
+
 </body>
 </html>
