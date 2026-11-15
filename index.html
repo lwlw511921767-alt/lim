@@ -36,7 +36,7 @@
       <div id="bookingRooms" class="booking-rooms" aria-live="polite"></div>
       <div id="bookingStatus" class="booking-status" role="status">正在连接共享预定表…</div>
       <details class="booking-admin"><summary>管理员登录 / Masuk administrator</summary>
-        <p class="booking-help">使用创建 Supabase 项目时的管理员邮箱注册或登录。其他员工无需登录即可查看实时预定状态。<small class="id">Gunakan email administrator untuk mendaftar atau masuk. Staf lain tidak perlu masuk untuk melihat status terbaru.</small></p>
+        <p class="booking-help">使用创建 Supabase 项目时的管理员邮箱注册或登录。登录状态保存在当前浏览器；请使用同一个浏览器，不要使用无痕模式或清除网站数据。其他员工无需登录即可查看实时预定状态。<small class="id">Gunakan email administrator untuk masuk. Status login tersimpan di browser ini; gunakan browser yang sama, jangan gunakan mode privat atau hapus data situs. Staf lain tidak perlu masuk untuk melihat status.</small></p>
         <form id="managerAuthForm" class="manager-auth">
           <div class="field"><label for="managerEmail">管理员邮箱 / Email administrator</label><input id="managerEmail" type="email" autocomplete="username" required placeholder="name@example.com"></div>
           <div class="field"><label for="managerPassword">密码 / Kata sandi</label><input id="managerPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="至少 8 位 / Minimal 8 karakter"></div>
@@ -164,7 +164,7 @@
         if(arrivalColumnAvailable)reservation.arrival_time=null;
         const {error}=await client.from('meet_room_reservations').upsert(reservation,{onConflict:'reservation_date,room'});
         busy.delete(room);
-        if(error){render();if(error.code==='42501'||error.code==='401')err('此账号没有预定修改权限，请使用项目管理员邮箱注册或登录。 / Akun ini tidak memiliki izin. Gunakan email administrator proyek.');else err('保存失败：'+error.message);return}
+        if(error){render();const message=(error.code==='42501'||error.code==='401')?'此账号没有预定修改权限，请确认登录的是创建 Supabase 项目的管理员邮箱。 / Akun ini tidak memiliki izin. Pastikan Anda masuk dengan email administrator proyek.':'保存失败：'+error.message;err(message);toast(message);return}
         await loadBookings();
       }
       async function saveArrivalTime(room,value){
