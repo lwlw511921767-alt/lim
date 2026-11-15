@@ -160,7 +160,9 @@
         if(!sessionUser||busy.has(room))return;
         busy.add(room);render();
         const date=localDate(),next=bookings[room]?.is_reserved!==true;
-        const {error}=await client.from('meet_room_reservations').upsert({reservation_date:date,room,is_reserved:next,arrival_time:null,updated_at:new Date().toISOString(),updated_by:sessionUser.id},{onConflict:'reservation_date,room'});
+        const reservation={reservation_date:date,room,is_reserved:next,updated_at:new Date().toISOString(),updated_by:sessionUser.id};
+        if(arrivalColumnAvailable)reservation.arrival_time=null;
+        const {error}=await client.from('meet_room_reservations').upsert(reservation,{onConflict:'reservation_date,room'});
         busy.delete(room);
         if(error){render();if(error.code==='42501'||error.code==='401')err('此账号没有预定修改权限，请使用项目管理员邮箱注册或登录。 / Akun ini tidak memiliki izin. Gunakan email administrator proyek.');else err('保存失败：'+error.message);return}
         await loadBookings();
